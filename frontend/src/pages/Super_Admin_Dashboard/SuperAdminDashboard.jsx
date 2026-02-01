@@ -75,7 +75,7 @@ const SuperAdminDashboard = () => {
       if (!isLoggedIn) return;
       setIsLoading(true);
       try {
-        const response = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/auth/user", {
+        const response = await fetch("https://intern-portal-gtn2.onrender.com/api/auth/user", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -107,7 +107,7 @@ const SuperAdminDashboard = () => {
       setStatsLoading(true);
       try {
         // Fetch campaigns count
-        const campaignsRes = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/campaign", {
+        const campaignsRes = await fetch("https://intern-portal-gtn2.onrender.com/api/campaign", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const campaignsData = await campaignsRes.json();

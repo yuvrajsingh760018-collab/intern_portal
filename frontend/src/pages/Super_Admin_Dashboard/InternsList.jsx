@@ -84,7 +84,7 @@ const InternsList = () => {
             internList.map(async (intern) => {
               try {
                 const donationsResponse = await fetch(
-                  `https://naye-pankh-intern-portal-ox93.vercel.app/api/donations/by-referral/${intern.referralCode}`,
+                  `https://intern-portal-gtn2.onrender.com/api/donations/by-referral/${intern.referralCode}`,
                   {
                     headers: {
                       Authorization: `Bearer ${token}`,
@@ -145,7 +145,7 @@ const InternsList = () => {
     }
     try {
       const referralCode = generateReferralCode();
-      const response = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/auth/signup", {
+      const response = await fetch("https://intern-portal-gtn2.onrender.com/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

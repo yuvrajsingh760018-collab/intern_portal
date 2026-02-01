@@ -73,7 +73,7 @@ const ModeratorDashboard = () => {
       if (!isLoggedIn) return;
       setIsLoading(true);
       try {
-        const response = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/auth/user", {
+        const response = await fetch("https://intern-portal-gtn2.onrender.com/api/auth/user", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -105,12 +105,12 @@ const ModeratorDashboard = () => {
       setStatsLoading(true);
       try {
         // Fetch campaigns count
-        const campaignsRes = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/campaign", {
+        const campaignsRes = await fetch("https://intern-portal-gtn2.onrender.com/api/campaign", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const campaignsData = await campaignsRes.json();
         // Fetch interns count
-        const internsRes = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/users", {
+        const internsRes = await fetch("https://intern-portal-gtn2.onrender.com/api/users", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const internsData = await internsRes.json();
