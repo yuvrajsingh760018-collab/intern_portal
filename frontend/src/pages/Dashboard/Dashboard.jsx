@@ -163,7 +163,7 @@ const DashboardPage = () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          "https://naye-pankh-intern-portal-ox93.vercel.app/api/auth/user",
+          "https://intern-portal-gtn2.onrender.com/api/auth/user",
           {
             method: "GET",
             headers: {

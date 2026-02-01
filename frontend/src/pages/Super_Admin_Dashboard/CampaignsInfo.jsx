@@ -131,7 +131,7 @@ const CampaignsInfo = () => {
   const handleDelete = async (campaign) => {
     if (!window.confirm("Are you sure you want to delete this campaign?")) return;
     try {
-      const response = await fetch(`https://naye-pankh-intern-portal-ox93.vercel.app/api/campaign/${campaign._id}`, {
+      const response = await fetch(`https://intern-portal-gtn2.onrender.com/api/campaign/${campaign._id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

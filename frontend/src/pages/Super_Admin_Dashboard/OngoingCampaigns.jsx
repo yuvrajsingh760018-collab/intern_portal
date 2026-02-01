@@ -217,7 +217,7 @@ const OngoingCampaigns = () => {
     }
     try {
       const response = await fetch(
-        `https://naye-pankh-intern-portal-ox93.vercel.app/api/campaign/${selectedCampaign._id}/extend`,
+        `https://intern-portal-gtn2.onrender.com/api/campaign/${selectedCampaign._id}/extend`,
         {
           method: "PUT",
           headers: {
