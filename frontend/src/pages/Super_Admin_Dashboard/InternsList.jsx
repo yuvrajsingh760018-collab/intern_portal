@@ -66,7 +66,7 @@ const InternsList = () => {
   useEffect(() => {
     const fetchInterns = async () => {
       try {
-        const response = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/users", {
+        const response = await fetch("https://intern-portal-gtn2.onrender.com/api/users", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const InternsList = () => {
             internList.map(async (intern) => {
               try {
                 const donationsResponse = await fetch(
-                  `https://naye-pankh-intern-portal-ox93.vercel.app/api/donations/by-referral/${intern.referralCode}`,
+                  `https://intern-portal-gtn2.onrender.com/api/donations/by-referral/${intern.referralCode}`,
                   {
                     headers: {
                       Authorization: `Bearer ${token}`,
@@ -145,7 +145,7 @@ const InternsList = () => {
     }
     try {
       const referralCode = generateReferralCode();
-      const response = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/auth/signup", {
+      const response = await fetch("https://intern-portal-gtn2.onrender.com/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -209,7 +209,7 @@ const InternsList = () => {
     }
     try {
       const response = await fetch(
-        `https://naye-pankh-intern-portal-ox93.vercel.app/api/users/${selectedIntern._id}`,
+        `https://intern-portal-gtn2.onrender.com/api/users/${selectedIntern._id}`,
         {
           method: "PUT",
           headers: {
@@ -261,7 +261,7 @@ const InternsList = () => {
     }
     try {
       const response = await fetch(
-        `https://naye-pankh-intern-portal-ox93.vercel.app/api/users/${selectedIntern._id}`,
+        `https://intern-portal-gtn2.onrender.com/api/users/${selectedIntern._id}`,
         {
           method: "DELETE",
           headers: {
@@ -490,7 +490,7 @@ const InternsList = () => {
                                   setSelectedInternName(`${intern.firstname} ${intern.lastname}`);
                                   try {
                                     const donationsResponse = await fetch(
-                                      `https://naye-pankh-intern-portal-ox93.vercel.app/api/donations/by-referral/${intern.referralCode}`,
+                                      `https://intern-portal-gtn2.onrender.com/api/donations/by-referral/${intern.referralCode}`,
                                       {
                                         headers: {
                                           Authorization: `Bearer ${token}`,

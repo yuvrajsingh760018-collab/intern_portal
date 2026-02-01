@@ -22,7 +22,7 @@ const OngoingCampaignsView = () => {
   useEffect(() => {
     const fetchCampaigns = async () => {
       try {
-        const response = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/campaign", {
+        const response = await fetch("https://intern-portal-gtn2.onrender.com/api/campaign", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

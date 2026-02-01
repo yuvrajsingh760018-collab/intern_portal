@@ -45,7 +45,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        "https://naye-pankh-intern-portal-ox93.vercel.app/api/auth/login",
+        "https://intern-portal-gtn2.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

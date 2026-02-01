@@ -52,7 +52,7 @@ const CampaignsInfo = () => {
   const fetchCampaigns = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("https://naye-pankh-intern-portal-ox93.vercel.app/api/campaign", {
+      const response = await fetch("https://intern-portal-gtn2.onrender.com/api/campaign", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -105,8 +105,8 @@ const CampaignsInfo = () => {
     try {
       const method = editMode ? "PUT" : "POST";
       const url = editMode
-        ? `https://naye-pankh-intern-portal-ox93.vercel.app/api/campaign/${selectedCampaign._id}`
-        : "https://naye-pankh-intern-portal-ox93.vercel.app/api/campaign";
+        ? `https://intern-portal-gtn2.onrender.com/api/campaign/${selectedCampaign._id}`
+        : "https://intern-portal-gtn2.onrender.com/api/campaign";
       const response = await fetch(url, {
         method,
         headers: {
@@ -131,7 +131,7 @@ const CampaignsInfo = () => {
   const handleDelete = async (campaign) => {
     if (!window.confirm("Are you sure you want to delete this campaign?")) return;
     try {
-      const response = await fetch(`https://naye-pankh-intern-portal-ox93.vercel.app/api/campaign/${campaign._id}`, {
+      const response = await fetch(`https://intern-portal-gtn2.onrender.com/api/campaign/${campaign._id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
